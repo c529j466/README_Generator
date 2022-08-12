@@ -49,6 +49,11 @@ inquirer
       type: 'input',
       message: 'What is your email address?',
       name: 'email',
+    },
+    {
+      type: 'input',
+      message: 'Instructions on how to contact you for questions?',
+      name: 'contact',
     }
 ])
 .then((response)=> {
@@ -91,8 +96,11 @@ ${response.tests}
 
 ## Questions <a name='questions'></a>
 
-GitHub: ${response.Github}
+GitHub: ${response.Github}<a href= "github.com/${response.Github}"></a>
 Email: ${response.email}
+
+${response.contact}
+
 `
 fs.writeFile('Example-README.md', ReadMeDoc, (err)=>
 err ? console.error(err) : console.log('Success!'))
