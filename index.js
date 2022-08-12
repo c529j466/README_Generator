@@ -12,7 +12,7 @@ inquirer
     {
       type: 'input',
       message: 'Give a description of your project.',
-      name: 'Description',
+      name: 'description',
     },
     {
       type: 'input',
@@ -50,13 +50,26 @@ inquirer
       message: 'What is your email address?',
       name: 'email',
     }
-]);
+])
+.then((response)=> {
+    const ReadMeDoc = 
+`
+#${response.title}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+## Table of Contents
+1. [Description](#description)
+2. Installation
+3. Usage
+4. Licenses
+5. Contributing
+6. Tests
+7. Questions
 
-// TODO: Create a function to initialize app
-function init() {}
+## Description <a name='description'></a>
 
-// Function call to initialize app
-init();
+${response.description}
+`
+fs.appendFile('README.md', ReadMeDoc, (err)=>
+err ? console.error(err) : console.log('Success!'))
+});
+
