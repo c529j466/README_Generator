@@ -96,7 +96,8 @@ ${response.tests}
 
 ## Questions <a name='questions'></a>
 
-GitHub: ${response.Github}<a href= "github.com/${response.Github}"></a>
+GitHub: <a href= "github.com/${response.Github}">${response.Github}</a>
+
 Email: ${response.email}
 
 ${response.contact}
