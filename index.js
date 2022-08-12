@@ -33,7 +33,7 @@ inquirer
     {
       type: 'input',
       message: 'What are the contribution instructions?',
-      name: 'contributions',
+      name: 'contributing',
     },
     {
       type: 'input',
@@ -53,23 +53,48 @@ inquirer
 ])
 .then((response)=> {
     const ReadMeDoc = 
-`
-#${response.title}
+
+`# <${response.title}>
 
 ## Table of Contents
 1. [Description](#description)
-2. Installation
-3. Usage
-4. Licenses
-5. Contributing
-6. Tests
-7. Questions
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Licenses](#licenses)
+5. [Contributing](#contributing)
+6. [Tests](#tests)
+7. [Questions](#questions)
 
 ## Description <a name='description'></a>
 
 ${response.description}
+
+## Installation <a name='installation'></a>
+
+${response.installation}
+
+## Usage <a name='usage'></a>
+
+${response.usage}
+
+## Licenses <a name='licenses'></a>
+
+${response.licenses}
+
+## Contributing <a name='contributing'></a>
+
+${response.contributing}
+
+## Tests <a name='tests'></a>
+
+${response.tests}
+
+## Questions <a name='questions'></a>
+
+GitHub: ${response.Github}
+Email: ${response.email}
 `
-fs.appendFile('README.md', ReadMeDoc, (err)=>
+fs.writeFile('Example-README.md', ReadMeDoc, (err)=>
 err ? console.error(err) : console.log('Success!'))
 });
 
