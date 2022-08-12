@@ -84,7 +84,7 @@ ${response.usage}
 
 ## Licenses <a name='licenses'></a>
 
-${response.licenses}
+Licenses Used: ${response.licenses}
 
 ## Contributing <a name='contributing'></a>
 
