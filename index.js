@@ -1,7 +1,8 @@
+// Linking in fileshare and inquirer
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// TODO: Create an array of questions for user input
+// This creates the prompt questions for the readme
 inquirer
 .prompt([
     {
@@ -56,10 +57,19 @@ inquirer
       name: 'contact',
     }
 ])
+
+
+
+// This uses the user responses and then adds them into the readme template created with template literals
 .then((response)=> {
-    const ReadMeDoc = 
+  if (response.licenses === 'BSD') {
+    var badge = href= "https://img.shields.io/badge/License-BSD_3--Clause-blue.svg"
+  }
+  
+  const ReadMeDoc = 
 
 `# <${response.title}>
+[![License ${badge}]
 
 ## Table of Contents
 1. [Description](#description)
@@ -103,6 +113,8 @@ Email: ${response.email}
 ${response.contact}
 
 `
+
+// This creates the readme file using the above template and logs success or error based on its success in the command line
 fs.writeFile('Example-README.md', ReadMeDoc, (err)=>
 err ? console.error(err) : console.log('Success!'))
 });
