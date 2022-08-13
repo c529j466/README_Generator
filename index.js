@@ -63,7 +63,7 @@ inquirer
 // This uses the user responses and then adds them into the readme template created with template literals
 .then((response)=> {
   if (response.licenses === 'BSD') {
-    var badge = "https://opensource.org/licenses/BSD-3-Clauses"
+    var badge = "https://img.shields.io/badge/License-BSD_3--Clause-blue.svg"
   }
   
   const ReadMeDoc = 
