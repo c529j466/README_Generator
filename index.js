@@ -29,7 +29,7 @@ inquirer
       type: 'list',
       message: 'Do you have any licenses?',
       name: 'licenses',
-      choices: ['BSD', 'MIT', 'GPL', 'None'],
+      choices: ['BSD', 'MIT', 'Apache', 'None'],
     },
     {
       type: 'input',
@@ -62,14 +62,25 @@ inquirer
 
 // This uses the user responses and then adds them into the readme template created with template literals
 .then((response)=> {
+  
+  // This creates the functionality for the badges to appear on the README based on users choice
   if (response.licenses === 'BSD') {
     var badge = "https://img.shields.io/badge/License-BSD_3--Clause-blue.svg"
   }
+  else if (response.licenses === 'MIT') {
+    var badge = "https://img.shields.io/badge/License-MIT-yellow.svg"
+  }
+  else if (response.licenses === 'Apache') {
+    var badge = "https://img.shields.io/badge/License-Apache_2.0-blue.svg"
+  }
+  else {
+    var badge = ""
+  }
   
+  // This creates the format for the README and adds in the users choices
   const ReadMeDoc = 
-
 `# ${response.title}
-[!["BSD License"](${badge})
+[![License](${badge})
 
 ## Table of Contents
 1. [Description](#description)
