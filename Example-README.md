@@ -1,5 +1,5 @@
-# <Big Project>
-[![License https://img.shields.io/badge/License-BSD_3--Clause-blue.svg]
+# ;lasghl;agh
+[!["BSD License"](https://opensource.org/licenses/BSD-3-Clauses)
 
 ## Table of Contents
 1. [Description](#description)
@@ -12,15 +12,15 @@
 
 ## Description <a name='description'></a>
 
-a;sghaosigha
+a;lsgha;lgh
 
 ## Installation <a name='installation'></a>
 
-asgha;sghaog
+a;sghg;ahg
 
 ## Usage <a name='usage'></a>
 
-aga;ogshasog
+;aighs;oia
 
 ## Licenses <a name='licenses'></a>
 
@@ -28,17 +28,17 @@ Licenses Used: BSD
 
 ## Contributing <a name='contributing'></a>
 
-a;goihasgha
+;agh;asgh
 
 ## Tests <a name='tests'></a>
 
-hgoasgiahg
+a;soighas;igha
 
 ## Questions <a name='questions'></a>
 
 GitHub: [c529j466](https://github.com/c529j466)
 
-Email: c529j466@yahoo.com
+Email: a;sgha;gh
 
-a;sghoahgaig
+asl;kghlsagh
 
