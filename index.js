@@ -126,7 +126,7 @@ ${response.contact}
 `
 
 // This creates the readme file using the above template and logs success or error based on its success in the command line
-fs.writeFile('Example-README.md', ReadMeDoc, (err)=>
+fs.writeFile('README.md', ReadMeDoc, (err)=>
 err ? console.error(err) : console.log('Success!'))
 });
 
