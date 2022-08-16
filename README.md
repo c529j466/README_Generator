@@ -1,4 +1,4 @@
-# <CLI Read_Me Generator>
+# CLI Read_Me Generator
 
 ## Description
 
